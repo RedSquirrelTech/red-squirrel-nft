@@ -1,0 +1,29 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+    "NonFungibleToken": "./cadence/contracts/standard/NonFungibleToken.cdc",
+    "MetadataViews": "./cadence/contracts/standard/MetadataViews.cdc",
+    "RedSquirrelNFT": "./cadence/contracts/RedSquirrelNFT.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "8a9f8ed11488d17ce4c3e013748fb55b979c536286fdc3b15e491c3a8c2ece07"
+		}
+	},
+	"deployments": {
+		"emulator": {
+			"emulator-account": ["NonFungibleToken", "MetadataViews", "RedSquirrelNFT"]
+		}
+	}
+}
